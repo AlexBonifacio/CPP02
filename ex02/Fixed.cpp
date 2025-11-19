@@ -73,6 +73,27 @@ bool	Fixed::operator!=(const Fixed &other)
 	return this->rawbits_ != other.rawbits_;
 }
 
+Fixed	Fixed::operator*(Fixed const &other) const
+{
+	Fixed	result;
+	
+	result.rawbits_ = (this->rawbits_ * other.rawbits_) >> fractional_bits_; // /256
+	
+	return result;
+}
+
+Fixed	Fixed::operator/(Fixed const &other) const
+{
+	Fixed result;
+
+	result.rawbits_ = (this->rawbits_ / other.rawbits_); // *256
+
+	return result;
+}
+
+// 5 * 256 = 1280 
+// 2 * 256 = 512
+
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called\n";
@@ -82,7 +103,7 @@ float	Fixed::toFloat(void) const
 {
 	float floater;
 
-	floater = static_cast<float>(rawbits_) / (1 << fractional_bits_);
+	floater = static_cast<float>(rawbits_) / 256;
 	return floater;
 }
 
