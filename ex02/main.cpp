@@ -1,6 +1,20 @@
 #include <iostream>
 #include "Fixed.hpp"
 
+
+// int main( void ) {
+// 	Fixed a;
+// 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+// 	std::cout << a << std::endl;
+// 	std::cout << ++a << std::endl;
+// 	std::cout << a << std::endl;
+// 	std::cout << a++ << std::endl;
+// 	std::cout << a << std::endl;
+// 	std::cout << b << std::endl;
+// 	std::cout << Fixed::max( a, b ) << std::endl;
+// 	return 0;
+// }
+
 // int main( void ) 
 // {
 // 	Fixed	const a(2.5f);
@@ -19,12 +33,21 @@
 
 
 // 	std::cout << "x = " << x << '\n';
+
+// 	Fixed d(0);
+// 	Fixed f(2);
+// 	Fixed c = f / d;
+// 	Fixed e = c + d;
+
+// 	std::cout << 'c' << c << '\n';
+// 	std::cout << c-- << '\n';
+// 	std::cout << c << '\n';
 // 	return 0;
 // }
 
 int main( void ) 
 {
-	Fixed a(12.3f);
+	Fixed a(1.006f);
 	Fixed b(12.4f);
 
 	std::cout << "a is " << a << "\n";
@@ -97,8 +120,25 @@ int main( void )
 	std::cout << "c = " << c << '\n';
 	std::cout << "b = " << b << '\n';
 	
-	c = c / b;
-	std::cout << "c / b = " << c << '\n';
+	b= 0;
+	Fixed d = c / b;
+	std::cout << "d / b = " << d << '\n';
+
+	a = 0;
+
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+
+	a = 0.5f;
+	b = 1.5f;
+	std::cout << "\ntest de min\n";
+	std::cout << Fixed::min(a, b) << '\n';
+
+	std::cout << "\ntest de max\n";
+	std::cout << Fixed::max(a, b) << '\n';
 
 	return 0;
 }
