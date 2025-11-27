@@ -3,12 +3,12 @@
 
 Fixed::Fixed() : rawbits_(0), error_flag_(false)
 {
-	std::cout << "Default constructor called\n";
+	// std::cout << "Default constructor called\n";
 }
 
 Fixed::Fixed(const Fixed &old_object) : error_flag_(old_object.error_flag_)
 {
-	std::cout << "Copy constructor called\n";
+	// std::cout << "Copy constructor called\n";
 	this->rawbits_ = old_object.getRawBits();
 }
 
@@ -19,7 +19,7 @@ Fixed::Fixed(const Fixed &old_object) : error_flag_(old_object.error_flag_)
 Fixed::Fixed(const int value)  
 	: rawbits_(value << fractional_bits_), error_flag_(false)
 {
-	std::cout << "Int constructor called\n";
+	// std::cout << "Int constructor called\n";
 }
 
 /*
@@ -28,17 +28,17 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value) 
 	: rawbits_(roundf(value * (1 << fractional_bits_))) , error_flag_(false)
 {
-	std::cout << "Float constructor called\n";
+	// std::cout << "Float constructor called\n";
 }
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called\n";
+	// std::cout << "Destructor called\n";
 }
 
 Fixed&	Fixed::operator=(const Fixed &other)
 {
-	std::cout << "Copy assignement operator called\n";
+	// std::cout << "Copy assignement operator called\n";
 	if (this != &other)
 	{
 		this->rawbits_ = other.getRawBits();
@@ -238,7 +238,7 @@ int		Fixed::toInt(void) const
 
 int	Fixed::getRawBits( void )const
 {
-	std::cout << "getRawBits member function called\n";
+	// std::cout << "getRawBits member function called\n";
 
 	return this->rawbits_;
 }
