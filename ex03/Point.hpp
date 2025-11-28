@@ -12,13 +12,12 @@ class Point
 		~Point();
 
 		Point&	operator=(const Point &other);
+        Fixed const &get_x(void) const;
+        Fixed const &get_y(void) const;
 
 	private:
 		Fixed const x;
 		Fixed const y;
-	
-	friend bool bsp( Point const a, Point const b, Point const c, Point const point);
-	
 };
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);

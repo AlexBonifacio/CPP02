@@ -22,6 +22,7 @@ int main(void){
 	Point p6(5.0f, 5.0f);
 	Point p7(-1.0f, -1.0f);
 	Point p8(10.0f, 10.0f);
+	// Point p9(p8);
 
 	if (bsp(a,b,c,p6))
 	{

@@ -25,6 +25,3 @@ class Fixed {
 
 std::ostream& operator<<(std::ostream &os, const Fixed &other);
 #endif
-
-
-// 0000 0010 | 1000 0000

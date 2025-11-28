@@ -248,12 +248,17 @@ void	Fixed::setRawBits(int const raw)
 	this->rawbits_ = raw;
 }
 
+bool	Fixed::get_errorflag(void)
+{
+	return this->error_flag_;
+}
+
 /*
 	std::cout << a == operator<<(std::cout, a)
 */
 std::ostream& operator<<(std::ostream &os, const Fixed &other)
 {
-	if (!other.error_flag_) 
+	if (!other.get_errorflag()) 
 	{
 		os << other.toFloat();
 	}

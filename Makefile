@@ -1,5 +1,5 @@
 
-EX_DIRS = ex00 ex01 ex02
+EX_DIRS = ex00 ex01 ex02 ex03
 
 all: Makefile
 	@i=0; \
