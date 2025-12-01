@@ -20,7 +20,7 @@ Fixed &Fixed::operator=(const Fixed &other)
 	{
 		this->rawbits_ = other.getRawBits();
 	}
-	
+
 	return *this;
 }
 
