@@ -40,7 +40,7 @@ class Fixed {
 		static	Fixed& max(Fixed& a, Fixed& b);
 		static	const Fixed& max(const Fixed& a, const Fixed& b);
 
-		bool	get_errorflag();
+		bool	get_errorflag() const;
 
 
 	private:

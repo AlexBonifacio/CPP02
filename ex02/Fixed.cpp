@@ -6,10 +6,10 @@ Fixed::Fixed() : rawbits_(0), error_flag_(false)
 	std::cout << "Default constructor called\n";
 }
 
-Fixed::Fixed(const Fixed &old_object) : error_flag_(old_object.error_flag_)
+Fixed::Fixed(const Fixed &old_object)
 {
 	std::cout << "Copy constructor called\n";
-	this->rawbits_ = old_object.getRawBits();
+	*this = old_object;
 }
 
 /* 
@@ -111,7 +111,7 @@ Fixed	Fixed::operator/(Fixed const &other) const
 
 	if (other.rawbits_ == 0)
 	{
-		std::cerr << "Error: Division by zero\n";
+		std::cout << "Error: Division by zero\n";
 		result.error_flag_ = true;
 		return result;
 	}
@@ -248,7 +248,7 @@ void	Fixed::setRawBits(int const raw)
 	this->rawbits_ = raw;
 }
 
-bool	Fixed::get_errorflag(void)
+bool	Fixed::get_errorflag(void) const
 {
 	return this->error_flag_;
 }

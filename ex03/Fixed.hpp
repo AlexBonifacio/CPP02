@@ -40,13 +40,13 @@ class Fixed {
 		static	Fixed& max(Fixed& a, Fixed& b);
 		static	const Fixed& max(const Fixed& a, const Fixed& b);
 
+		bool	getErrorFlag() const;
 
 	private:
 		int					rawbits_;
 		static const int 	fractional_bits_ = 8;
 		bool				error_flag_;
 
-	friend std::ostream& operator<<(std::ostream &os, const Fixed &other);
 };
 
 std::ostream& operator<<(std::ostream &os, const Fixed &other);

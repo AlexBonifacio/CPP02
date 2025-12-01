@@ -111,7 +111,7 @@ Fixed	Fixed::operator/(Fixed const &other) const
 
 	if (other.rawbits_ == 0)
 	{
-		std::cerr << "Error: Division by zero\n";
+		std::cout << "Error: Division by zero\n";
 		result.error_flag_ = true;
 		return result;
 	}
@@ -248,12 +248,16 @@ void	Fixed::setRawBits(int const raw)
 	this->rawbits_ = raw;
 }
 
+bool	Fixed::getErrorFlag() const
+{
+	return error_flag_;
+}
 /*
 	std::cout << a == operator<<(std::cout, a)
 */
 std::ostream& operator<<(std::ostream &os, const Fixed &other)
 {
-	if (!other.error_flag_) 
+	if (!other.getErrorFlag()) 
 	{
 		os << other.toFloat();
 	}
