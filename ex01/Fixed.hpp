@@ -23,5 +23,5 @@ class Fixed {
 		static const int 	fractional_bits_ = 8;
 };
 
-std::ostream& operator<<(std::ostream &os, const Fixed &other);
+std::ostream& operator<<(std::ostream& os, const Fixed &other);
 #endif

@@ -79,7 +79,7 @@ void	Fixed::setRawBits(int const raw)
 /*
 	std::cout << a == operator<<(std::cout, a)
 */
-std::ostream& operator<<(std::ostream &os, const Fixed &other)
+std::ostream& operator<<(std::ostream& os, const Fixed &other)
 {
 	os << other.toFloat();
 	return os;
