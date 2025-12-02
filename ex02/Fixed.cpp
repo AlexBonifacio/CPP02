@@ -117,7 +117,6 @@ Fixed	Fixed::operator/(Fixed const &other) const
 	}
 
 	result.rawbits_ = (this->rawbits_ << fractional_bits_) / other.rawbits_; // (A*256)/B
-	std::cout << "rawbits = " << result.rawbits_ << '\n';
 
 	return result;
 }

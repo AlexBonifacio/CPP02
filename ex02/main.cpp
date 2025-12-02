@@ -34,12 +34,12 @@ int main( void )
 
 	// std::cout << "x = " << x << '\n';
 
-	Fixed d(1);
-	Fixed f(2);
+	Fixed d(5);
+	Fixed f(5);
 	Fixed c = f / d;
 	Fixed e = c + d;
 
-	std::cout << 'c ' << c << '\n';
+	std::cout << "c " << c << '\n';
 	std::cout << c-- << '\n';
 	std::cout << c << '\n';
 	return 0;
